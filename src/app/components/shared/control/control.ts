@@ -11,5 +11,6 @@ import { Component, input, ViewEncapsulation } from '@angular/core';
   },
 })
 export class Control {
+  // @HostBinding() className = 'control';
   label = input.required<string>();
 }
