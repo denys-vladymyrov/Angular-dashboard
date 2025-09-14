@@ -22,4 +22,12 @@ export class Tickets {
 
     this.tickets.update((tickets) => [...tickets, ticket]);
   }
+
+  onCloseTicket(id: string) {
+    this.tickets.update((tickets) =>
+      tickets.map((t) => {
+        return t.id === id ? { ...t, status: 'closed' } : t;
+      }),
+    );
+  }
 }
